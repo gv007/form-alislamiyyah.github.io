@@ -1,65 +1,196 @@
-<!DOCTYPE html>
+<!doctype html>
 <html id="id" lang="id">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Formulir PPDB SMP Gunungjati 2</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<style>body{padding:20px}.form-control,.form-select{border:1px solid #a0a0a0;box-shadow:0 1px 1px rgba(0,0,0,.2)}</style>
-<meta property="og:image" content="https://github.com/gv007/form.alislamiyyah.github.io/blob/main/logo.png?raw=true">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-</head>
-<body>
-    <div class="container">
-        <img src="logo.png" class="d-flex mx-auto" style="width: 150px;" alt="SMP Gunungjati 2">
-        <p class="text-center fw-semibold mt-0 mb-4"><a href="https://alislamiyyah.smpgunungjati2.sch.id/" target="_blank" style="text-decoration: none;">alislamiyyah.smpgunungjati2.sch.id</a></p>
 
-        <h1 class="text-center fs-3 mb-4">Formulir Pendaftaran Ponpes Al-Islamiyyah Gunungjati</h1>
-        <form>
-            <div class="mb-3">
-                <label for="nama" class="form-label fw-semibold">Nama Lengkap Santri</label>
-                <input type="text" class="form-control" id="nama" name="nama" required placeholder="Nama lengkap santri">
-            </div>
-            <div class="mb-3">
-                <label for="jenisKelamin" class="form-label fw-semibold">Jenis Kelamin</label>
-                <select class="form-select" id="jenisKelamin" name="jenisKelamin" required>
-                    <option value="">Pilih Jenis Kelamin</option>
-                    <option value="Laki-laki">Laki-laki</option>
-                    <option value="Perempuan">Perempuan</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="tempatTanggalLahir" class="form-label fw-semibold">Tempat dan Tanggal Lahir</label>
-                <input type="text" class="form-control" id="tempatTanggalLahir" name="tempatTanggalLahir" required placeholder="Contoh: Purwokerto, 01-01-2000">
-            </div>
-            <div class="mb-3">
-                <label for="namaOrangTua" class="form-label fw-semibold">Nama Orang Tua/Wali</label>
-                <input type="text" class="form-control" id="namaOrangTua" name="namaOrangTua" required placeholder="Masukkan nama orang tua/wali">
-            </div>
-            <div class="mb-3">
-                <label for="noTelpOrangTua" class="form-label fw-semibold">No. WA Orang Tua/Wali</label>
-                <input type="tel" class="form-control" id="noTelpOrangTua" name="noTelpOrangTua" required placeholder="Masukkan nomor WA orang tua/wali">
-            </div>
-            <div class="mb-3">
-                <label for="emailOrangTua" class="form-label fw-semibold">Email Orang Tua/Wali</label>
-                <input type="email" class="form-control" id="emailOrangTua" name="emailOrangTua" required placeholder="Alamat email orang tua/wali">
-            </div>
-            <button type="button" onclick="sendWhatsAppMessage()" class="btn btn-success mt-3"><i class="fab fa-whatsapp"></i> Kirim Formulir</button>
-        </form>
-    </div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alislamiyyah Gunungjati</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.0/css/all.css">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <footer>
-        <div class="footer-top mt-5 p-2 bg-dark text-white text-center" style="margin-left: -20px; margin-right: -20px;">
+	<!-- Metadata untuk media sosial -->
+	<meta property="og:title" content="Al-Islamiyyah Gunungjati">
+	<meta property="og:description" content="Al-Islamiyyah Gunungjati - Santun Berperilaku, Kompetitif dalam Prestasi.">
+	<meta property="og:image" content="https://github.com/gv007/alislamiyyah.github.io/blob/main/logo.png?raw=true">
+	<meta property="og:url" content="https://alislamiyyah.smpgunungjati2.sch.id/">
+
+	<!-- Meta tag Twitter Cards -->
+	<meta content='summary_large_image' name='twitter:card'/>
+	<meta content='Asrori Akhmad' property='twitter:title'/>
+	<meta content='https://alislamiyyah.smpgunungjati2.sch.id/' property='twitter:url'/>
+	<meta content='https://github.com/gv007/alislamiyyah.github.io/blob/main/logo.png?raw=true' property='twitter:image'/>
+	<meta content='Al-Islamiyyah Gunungjati - Santun Berperilaku, Kompetitif dalam Prestasi.' property='twitter:description'/>
+
+	<!-- Metadata untuk SEO -->
+	<meta name="description" content="Al-Islamiyyah Gunungjati - Santun Berperilaku, Kompetitif dalam Prestasi.">
+	<meta name="keywords" content="alislamiyyah gunungjati, alislamiyyah gunungjati purwokerto, alislamiyyah, gunungjati, purwokerto">
+	<meta name="author" content="Al-Islamiyyah Gunungjati">
+
+	<!-- Metadata tambahan -->
+	<meta name="robots" content="index, follow">
+	<link rel="canonical" href="https://alislamiyyah.smpgunungjati2.sch.id/">
+	<meta name="theme-color" content="#fff">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="referrer" content="no-referrer-when-downgrade">
+
+	<!-- Schema.org markup -->
+	<script type="application/ld+json">
+	{
+		"@context": "http://schema.org",
+		"@type": "EducationalOrganization",
+		"name": "Al-Islamiyyah Gunungjati",
+		"url": "https://alislamiyyah.smpgunungjati2.sch.id/",
+		"logo": "https://github.com/gv007/alislamiyyah.github.io/blob/main/logo.png?raw=true",
+		"description": "Al-Islamiyyah Gunungjati - Santun Berperilaku, Kompetitif dalam Prestasi."
+	}
+	</script>
+  </head>
+  <body class="bg-body-tertiary">
+    
+	  <!-- Navbar -->
+	  <section class="navbar bg-body-tertiary shadow fixed-top">
+	  <nav>
+		<div class="container-fluid">
+		  <a class="navbar-brand" href="#">
+			<img src="logo.png" alt="Logo" width="50">
+			<span class="fw-semibold fw-bold fs-6">Al-Islamiyyah Gunungjati</span>
+		  </a>
+		</div>
+	  </nav>
+	  </section>
+
+	  <div>
+		<img src="ponpes.jpg" class="img-fluid mx-auto d-flex rounded-bottom" alt="ponpes al-islamiyyah gunungjati">
+	  </div>
+
+	  <!-- Pembuka -->
+	  <section class="container container-pembuka mt-5">
+		<div>
+			<h3 class="fs-5 fw-bold mb-4" dir="rtl" translate="no">السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</h3>
+			
+			<h3 class="fw-bold mb-4" dir="rtl" translate="no">أهلا وسهلا</h3>
+	  
+			<h3 class="fw-bold mb-4" id="typed-text">Selamat Datang di Website Resmi Ponpes Al-Islamiyyah Gunungjati Purwokerto </h3>
+
+		</div>
+		<div class="card">
+			<p class="container teks-pembuka fw-semibold">Pondok Pesantren Al-Islamiyyah Gunungjati berkomitmen untuk membantu keluarga muslim yang mengalami keterbatasan ekonomi agar dapat mengakses pendidikan berkualitas. Dengan tujuan mencetak generasi Muslim hebat."</p>
+		  </div>
+	  </section>
+	  
+	<!-- Tombol daftar -->
+	<section>
+	<div class="container text-center py-5">
+		<a href="https://form-alislamiyyah.smpgunungjati2.sch.id/" target="_blank" class="btn btn-primary btn-lg shadow"><i class="far fa-file"></i> <span class="fw-bold">Daftar Sekarang</span></a></div>
+	</section> 
+
+	<!-- Tujuan -->
+	<h2 class="container align-text-center text-center fw-bold mt-5 mb-5">Tujuan Ponpes Al-Islamiyyah Gunungjati</h2>
+	<section class="container-tujuan">
+		<div class="tujuan-teks">
+			<img src="santri1.png" alt="santri al-Islamiyyah Gunungjati">
+		</div>
+		<div class="tujuan-teks">
+			<ul class="list-unstyled fs-6"> 
+				<li><i class="fad fa-check"></i> Mencetak Muslim Benar dan Pintar</li>
+				<li><i class="fad fa-check"></i> Mendidik anak menjadi cerdas nan kuat</li>
+				<li><i class="fad fa-check"></i> Berhati khusyu’ nan ta’at</li>
+				<li><i class="fad fa-check"></i> Berperilaku baik nan manfa’at</li>
+				<li><i class="fad fa-check"></i> Bekerja keras nan giat</li>
+				<li><i class="fad fa-check"></i> Aktifis perekat umat</li>
+			</ul>
+		</div>
+	</section>
+	
+	<!-- Program -->
+	<h2 class="container align-text-center text-center fw-bold mt-5 mb-3">Program Unggulan Ponpes Al-Islamiyyah Gunungjati</h2>
+	<section class="container-program">
+		<div class="card mb-2 program-item">
+			<h3>Program Tahsin</h3>
+			<p>Program yang dikhususkan untuk para santri guna memperbaiki bacaan Al Qur'an.</p>
+		</div>
+		<div class="card mb-2 program-item">
+			<h3>Program Tahfidz</h3>
+			<p>Program untuk para santri guna menambah dan menjaga hafalan Al Qur'an Juz 30.</p>
+		</div>
+		<div class="card mb-2 program-item">
+			<h3>Program Qiroatul Kitab</h3>
+			<p>Program yang dikhususkan untuk santri guna memperoleh wawasan keagamaan dari sumber otoritatif.</p>
+		</div>
+		<div class="card mb-2 program-item">
+			<h3>Sekolah di SMP Gunungjati 2</h3>
+			<p>Setelah lulus SD/MI santri tetap melanjutkan sekolah ke tingkat SMP/MTs.</p>
+		</div>
+	</section>
+	
+	<!-- Kegiatan -->
+	<h2 class="container align-text-center text-center fw-bold mt-5 mb-5">Kegiatan Santri Al-Islamiyyah Gunungjati</h2>
+	<section class="container-kegiatan">
+		<div class="kegiatan-teks">
+			<ul class="list-unstyled fs-6"> 
+				<li><i class="fad fa-check"></i> Tahsin dan Tahfiz Al Qur’an</li>
+				<li><i class="fad fa-check"></i> Muhadhoroh / Orasi</li>
+				<li><i class="fad fa-check"></i> Qiro'atul Kutub</li>
+				<li><i class="fad fa-check"></i> Leadership</li>
+				<li><i class="fad fa-check"></i> Life Skill</li>
+				<li><i class="fad fa-check"></i> Pencak Silat</li>
+				<li><i class="fad fa-check"></i> Pembiasaan puasa sunnah senin dan kamis</li>
+				<li><i class="fad fa-check"></i> Tahlil dan Istighotsah</li>
+			</ul>
+		</div>
+		<div class="kegiatan-teks">
+			<img src="santri2.png" alt="santri al-Islamiyyah Gunungjati">
+		</div>
+	</section>
+
+	<!-- Tombol daftar -->
+	<div class="text-center mt-5">
+		<a href="https://form-alislamiyyah.smpgunungjati2.sch.id/" target="_blank" class="btn btn-primary btn-lg shadow"><i class="far fa-file"></i> <span class="fw-bold">Daftar Sekarang</span></a></div>
+  
+	<!-- Alamat -->
+	<div class="container mt-5">
+		<div class="card">
+			<div class="card-body">
+				<h5 class="card-title"><i class="fad fa-map-marked-alt"></i> Alamat</h5>
+				<p class="card-text">Jl. Mayjen Sutoyo Gang 2, Kelurahan Kedungwuluh, Kecamatan Purwokerto Barat, Kabupaten Banyumas. <br><a href="https://maps.app.goo.gl/ZaHocDLpNzc5vaDDA" target="_blank">Peta Al-Islamiyyah Gunungjati <i class="fad fa-external-link-alt"></i></a></p>
+			</div>
+		</div>
+		<div class="card mt-1">
+			<div class="card-body">
+				<h5 class="card-title"><i class="fad fa-phone-office"></i> Telepon</h5>
+				<p class="card-text">(0281) 636930</p>
+			</div>
+		</div>
+		<div class="card mt-1">
+			<div class="card-body">
+				<h5 class="card-title"><i class="fad fa-user-shield"></i> Kontak admin</h5>
+				<p class="card-text"><a href="https://asrori.smpgunungjati2.sch.id" target="_blank">asrori.smpgunungjati2.sch.id <i class="fad fa-external-link-alt"></i></a></p>
+			</div>
+		</div>
+		<div class="card mt-1 mb-5">
+			<div class="card-body">
+				<h5 class="card-title"><i class="fad fa-browser"></i> Website</h5>
+				<p class="card-text"><a href="https://smpgunungjati2.sch.id" target="_blank">smpgunungjati2.sch.id <i class="fad fa-external-link-alt"></i></a></p>
+				<p class="card-text"><a href="https://alislamiyyah.smpgunungjati2.sch.id">alislamiyyah.smpgunungjati2.sch.id <i class="fad fa-home-lg-alt"></i></a></p>
+			</div>
+		</div>
+	</div>
+	
+	</div>
+	</section>
+
+	<!-- footer -->
+	  <footer>
+        <div class="footer-top p-2 bg-dark text-white text-center">
               <img src="logo.png" style="width: 30px;" alt="SMP Gunungjati 2">
         </div>
-        <div class="footer-bottom bg-black text-white text-center py-3" style="margin-left: -20px; margin-right: -20px; margin-bottom: -20px;">
-            &copy; 2024 | SMP Gunungjati 2 Purwokerto
+        <div class="footer-bottom bg-black text-white text-center py-3">
+            &copy; 2024 | Al-Islamiyyah Gunungjati
         </div>
    </footer>
-    
-   <script>function sendWhatsAppMessage(){var e=document.getElementById("nama").value,t=document.getElementById("jenisKelamin").value,n=document.getElementById("tempatTanggalLahir").value,s=document.getElementById("namaOrangTua").value,o=document.getElementById("noTelpOrangTua").value,l=document.getElementById("emailOrangTua").value,i="6285747099154",r="Nama Lengkap: "+e+"\nJenis Kelamin: "+t+"\nTempat dan Tanggal Lahir: "+n+"\nNama Orang Tua/Wali: "+s+"\nNo. Telp Orang Tua/Wali: "+o+"\nEmail Orang Tua/Wali: "+l,c="https://wa.me/"+i+"?text="+encodeURIComponent(r);window.location.href=c}
-</script>
-    
+
 </body>
 </html>
