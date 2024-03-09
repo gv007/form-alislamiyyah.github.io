@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html id="id" lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulir PPDB SMP Gunungjati 2</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>body{padding:20px}.form-control,.form-select{border:1px solid #a0a0a0;box-shadow:0 1px 1px rgba(0,0,0,.2)}</style>
+<meta property="og:image" content="https://github.com/gv007/form.alislamiyyah.github.io/blob/main/logo.png?raw=true">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" class="d-flex mx-auto" style="width: 150px;" alt="SMP Gunungjati 2">
+        <p class="text-center fw-semibold mt-0 mb-4"><a href="https://alislamiyyah.smpgunungjati2.sch.id/" target="_blank" style="text-decoration: none;">alislamiyyah.smpgunungjati2.sch.id</a></p>
+
+        <h1 class="text-center fs-3 mb-4">Formulir Pendaftaran Ponpes Al-Islamiyyah Gunungjati</h1>
+        <form>
+            <div class="mb-3">
+                <label for="nama" class="form-label fw-semibold">Nama Lengkap Santri</label>
+                <input type="text" class="form-control" id="nama" name="nama" required placeholder="Nama lengkap santri">
+            </div>
+            <div class="mb-3">
+                <label for="jenisKelamin" class="form-label fw-semibold">Jenis Kelamin</label>
+                <select class="form-select" id="jenisKelamin" name="jenisKelamin" required>
+                    <option value="">Pilih Jenis Kelamin</option>
+                    <option value="Laki-laki">Laki-laki</option>
+                    <option value="Perempuan">Perempuan</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="tempatTanggalLahir" class="form-label fw-semibold">Tempat dan Tanggal Lahir</label>
+                <input type="text" class="form-control" id="tempatTanggalLahir" name="tempatTanggalLahir" required placeholder="Contoh: Purwokerto, 01-01-2000">
+            </div>
+            <div class="mb-3">
+                <label for="namaOrangTua" class="form-label fw-semibold">Nama Orang Tua/Wali</label>
+                <input type="text" class="form-control" id="namaOrangTua" name="namaOrangTua" required placeholder="Masukkan nama orang tua/wali">
+            </div>
+            <div class="mb-3">
+                <label for="noTelpOrangTua" class="form-label fw-semibold">No. WA Orang Tua/Wali</label>
+                <input type="tel" class="form-control" id="noTelpOrangTua" name="noTelpOrangTua" required placeholder="Masukkan nomor WA orang tua/wali">
+            </div>
+            <div class="mb-3">
+                <label for="emailOrangTua" class="form-label fw-semibold">Email Orang Tua/Wali</label>
+                <input type="email" class="form-control" id="emailOrangTua" name="emailOrangTua" required placeholder="Alamat email orang tua/wali">
+            </div>
+            <button type="button" onclick="sendWhatsAppMessage()" class="btn btn-success mt-3"><i class="fab fa-whatsapp"></i> Kirim Formulir</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-top mt-5 p-2 bg-dark text-white text-center" style="margin-left: -20px; margin-right: -20px;">
+              <img src="logo.png" style="width: 30px;" alt="SMP Gunungjati 2">
+        </div>
+        <div class="footer-bottom bg-black text-white text-center py-3" style="margin-left: -20px; margin-right: -20px; margin-bottom: -20px;">
+            &copy; 2024 | SMP Gunungjati 2 Purwokerto
+        </div>
+   </footer>
+    
+   <script>function sendWhatsAppMessage(){var e=document.getElementById("nama").value,t=document.getElementById("jenisKelamin").value,n=document.getElementById("tempatTanggalLahir").value,s=document.getElementById("namaOrangTua").value,o=document.getElementById("noTelpOrangTua").value,l=document.getElementById("emailOrangTua").value,i="6285747099154",r="Nama Lengkap: "+e+"\nJenis Kelamin: "+t+"\nTempat dan Tanggal Lahir: "+n+"\nNama Orang Tua/Wali: "+s+"\nNo. Telp Orang Tua/Wali: "+o+"\nEmail Orang Tua/Wali: "+l,c="https://wa.me/"+i+"?text="+encodeURIComponent(r);window.location.href=c}
+</script>
+    
+</body>
+</html>
