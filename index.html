@@ -18,11 +18,11 @@
         <h1 class="text-center fs-3 mb-4">Formulir Pendaftaran PONPES Al-Islamiyyah Gunungjati</h1>
         <form>
             <div class="mb-3">
-                <label for="nama" class="form-label fw-semibold">Nama Lengkap Santri</label>
+                <label for="nama" class="form-label fw-semibold">Nama Lengkap Santri<span class="text-danger">*</span></label>
                 <input type="text" class="form-control" id="nama" name="nama" required placeholder="Nama lengkap santri">
             </div>
             <div class="mb-3">
-                <label for="jenisKelamin" class="form-label fw-semibold">Jenis Kelamin</label>
+                <label for="jenisKelamin" class="form-label fw-semibold">Jenis Kelamin<span class="text-danger">*</span></label>
                 <select class="form-select" id="jenisKelamin" name="jenisKelamin" required>
                     <option value="">Pilih Jenis Kelamin</option>
                     <option value="Laki-laki">Laki-laki</option>
@@ -30,28 +30,28 @@
                 </select>
             </div>
             <div class="mb-3">
-                <label for="tempatTanggalLahir" class="form-label fw-semibold">Tempat dan Tanggal Lahir</label>
+                <label for="tempatTanggalLahir" class="form-label fw-semibold">Tempat dan Tanggal Lahir<span class="text-danger">*</span></label>
                 <input type="text" class="form-control" id="tempatTanggalLahir" name="tempatTanggalLahir" required placeholder="Contoh: Purwokerto, 01-01-2000">
             </div>
             <div class="mb-3">
-                <label for="sekolahAsal" class="form-label fw-semibold">Sekolah Asal</label>
+                <label for="sekolahAsal" class="form-label fw-semibold">Sekolah Asal<span class="text-danger">*</span></label>
                 <input type="text" class="form-control" id="sekolahAsal" name="sekolahAsal" required placeholder="Contoh: SD/MI Purwokerto">
             </div>
             <div class="mb-3">
-                <label for="namaOrangTua" class="form-label fw-semibold">Nama Orang Tua/Wali</label>
+                <label for="namaOrangTua" class="form-label fw-semibold">Nama Orang Tua/Wali<span class="text-danger">*</span></label>
                 <input type="text" class="form-control" id="namaOrangTua" name="namaOrangTua" required placeholder="Masukkan nama lengkap orang tua/wali">
             </div>
             <div class="mb-3">
-                <label for="noWaOrangTua" class="form-label fw-semibold">No. WhatsApp Orang Tua/Wali</label>
+                <label for="noWaOrangTua" class="form-label fw-semibold">No. WhatsApp Orang Tua/Wali<span class="text-danger">*</span></label>
                 <input type="tel" class="form-control" id="noWaOrangTua" name="noWaOrangTua" required placeholder="Contoh: 0812 3456 7890">
             </div>
             <div class="mb-3">
-                <label for="alamatOrangTua" class="form-label fw-semibold">Alamat Lengkap Orang Tua/Wali</label>
+                <label for="alamatOrangTua" class="form-label fw-semibold">Alamat Lengkap Orang Tua/Wali<span class="text-danger">*</span></label>
                 <textarea class="form-control" id="alamatOrangTua" name="alamatOrangTua" required placeholder="Contoh: Jl. Mayjen Sutoyo Gang 2, Kelurahan Kedungwuluh, Kecamatan Purwokerto Barat, Kabupaten Banyumas." style="resize: vertical; height: 200px;"></textarea>
             </div>
                        
             <div class="mb-3">
-                <label for="emailOrangTua" class="form-label fw-semibold">Email Orang Tua/Wali</label>
+                <label for="emailOrangTua" class="form-label fw-semibold">Email Orang Tua/Wali<span class="text-danger">*</span></label>
                 <input type="email" class="form-control" id="emailOrangTua" name="emailOrangTua" required placeholder="Contoh: namaorangtua@gmail.com">
             </div>
             <button type="button" onclick="sendWhatsAppMessage()" class="btn btn-success mt-3"><i class="fab fa-whatsapp"></i> Kirim Formulir</button>
@@ -67,7 +67,7 @@
         </div>
    </footer>
     
-   <script>function sendWhatsAppMessage(){var a=document.getElementById("nama").value,e=document.getElementById("jenisKelamin").value,n=document.getElementById("tempatTanggalLahir").value,t=document.getElementById("sekolahAsal").value,l=document.getElementById("namaOrangTua").value,m=document.getElementById("noWaOrangTua").value,u=document.getElementById("alamatOrangTua").value,g=document.getElementById("emailOrangTua").value,d="https://wa.me/6285747099154?text="+encodeURIComponent("Nama: "+a+"\n\nJenis Kelamin: "+e+"\n\nTempat dan Tanggal Lahir: "+n+"\n\nSekolah Asal: "+t+"\n\nNama Orang Tua/Wali: "+l+"\n\nNo. WA Orang Tua/Wali: "+m+"\n\nAlamat Orang Tua/Wali: "+u+"\n\nEmail Orang Tua/Wali: "+g);window.location.href=d}</script>
+   <script>function sendWhatsAppMessage(){var a=document.getElementById("nama").value,e=document.getElementById("jenisKelamin").value,n=document.getElementById("tempatTanggalLahir").value,t=document.getElementById("sekolahAsal").value,l=document.getElementById("namaOrangTua").value,m=document.getElementById("noWaOrangTua").value,u=document.getElementById("alamatOrangTua").value,g=document.getElementById("emailOrangTua").value;if(!a||!e||!n||!t||!l||!m||!u||!g){return void alert("Harap lengkapi semua kolom sebelum mengirim pesan!")}var d="https://wa.me/6285747099154?text="+encodeURIComponent("Nama: "+a+"\n\nJenis Kelamin: "+e+"\n\nTempat dan Tanggal Lahir: "+n+"\n\nSekolah Asal: "+t+"\n\nNama Orang Tua/Wali: "+l+"\n\nNo. WA Orang Tua/Wali: "+m+"\n\nAlamat Orang Tua/Wali: "+u+"\n\nEmail Orang Tua/Wali: "+g);window.location.href=d}</script>
     
 </body>
 </html>
